@@ -20,7 +20,6 @@ function parseJson(response) {
     }
 }
 export async function POST(req) {
-    
     const { prompt } = await req.json();
     const response = await openai.chat.completions.create({
         model: "gemini-2.0-flash",
